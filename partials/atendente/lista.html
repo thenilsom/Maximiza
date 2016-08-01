@@ -1,0 +1,87 @@
+<div class="row">
+
+	<div class="panel panel-default">
+	
+	<div class="panel-heading">
+		<h2 class="panel-title">Listagem de Atendentes</h2>
+	</div>
+
+	<div class="panel-body fundo-panel">
+
+		<div class="wrapper-responsivo">
+			<div class="table-overflow">
+				<div class="row-responsivo header blue">
+
+					<div class="cell-responsivo col-md-8 col-sm-6">Nome</div>
+
+					<div class="cell-responsivo col-md-2 col-sm-4">Administrador</div>
+					
+					<div class="cell-responsivo col-md-2 col-sm-2">Ações</div>
+
+				</div>
+				
+				</div>
+				
+				<div class="fixed-panel">
+				<div class="table-overflow">
+
+					<div class="row-responsivo" data-ng-repeat="atendente in listaTabela | filter:search as filtros">
+
+						<div class="cell-responsivo col-md-8 col-sm-6"> <span> {{atendente.nome}} </span> </div>
+
+						<div class="cell-responsivo col-md-2 col-sm-4"> <span class="span-cell"> {{atendente.administrador ? 'S' : 'N'}} </span></div>
+						
+						<div class="cell-responsivo col-md-2 col-sm-2">
+						<span class="span-cell">
+							<a class="btn btn-info btn-xs" title="Alterar" data-ng-click="alterar(atendente)">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</a> 
+							<a class="btn btn-danger btn-xs" title="Excluir" data-ng-click="excluir(atendente)">
+								<span class="glyphicon glyphicon-trash"></span>
+							</a> 
+						</span>
+							
+						</div>
+
+					</div>
+					
+					</div>
+
+		</div>
+		
+		<div class="row-responsivo row-filtro">
+					
+					<!-- Pesquisa -->
+					<div class="cell-responsivo col-md-6 col-sm-6">
+					
+					<div class="input-group">
+						<span class="input-group-addon"> 
+						<span class="glyphicon glyphicon-search"></span>
+						</span> <input id="inputFiltro" type="text" data-focus
+							class="form-control" placeholder="Pesquisa"
+							data-ng-model="search.$" />
+					</div>
+
+					</div>
+				
+					<!-- Total Registros -->
+					<div class="cell-responsivo col-md-6 col-sm-6">
+						<div class="col-md-12 col-sm-12 text-right registros-tabela">
+							<span>Registros: {{filtros.length}}</span>
+						</div>
+					</div>
+
+			  </div>
+		
+	</div>
+	
+	<div class="panel panel-default text-center panel-botoes-tabela">
+		<a class="btn btn-primary" data-ng-click="incluir()"><span
+			class="glyphicon glyphicon-plus"></span> Novo </a> 
+		</div>
+
+</div>
+
+</div>
+
+</div>

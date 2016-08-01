@@ -1,0 +1,298 @@
+@CHARSET "UTF-8";
+
+/* ------ Classes referente ao Template da aplicação ------ */
+
+/* Header */
+#header {
+	height: 100px;
+	color: #ffffff;
+	background-color: #1C60AB;
+}
+
+/*tamanho da fonte para input-sm*/
+.input-sm, .form-group-sm .form-control{
+	font-size: 11pt ! important
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #3b3b3b;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+header {
+	font-weight: bold;
+}
+
+.fundo-panel {
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+}
+
+.espaco-grid{
+	margin-top: 1em;
+}
+
+.espaco-grid-bottom-1{
+	margin-bottom: 1em;
+}
+
+.espaco-grid-bottom-2{
+	margin-bottom: 2em;
+}
+
+ .big-checkbox {
+ 	width: 17px; height: 17px;
+ }
+ 
+ .span-cell{
+ margin-left: 10px;
+ }
+
+
+.usuario {
+	color : #fff;
+	margin : 0;
+	margin-right: 20px;
+	
+}
+
+.main {
+	margin-top: 63px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.panel-botoes-tabela{
+	padding: 7px;
+    max-width: 1324px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    background-color: #f2f2f2;
+}
+
+.registros-tabela{
+	padding-top: 6px;
+	padding-right: 15px;
+}
+
+.font-registro{
+	font-size: 10pt;
+}
+
+.checkbox-tabela{
+
+ margin-left: 10px ;
+ margin-top: 2px;
+ 
+}
+
+
+.panel-default > .panel-heading-branco {
+background: #fff; color: #fff; 
+padding: 15 10;
+}
+
+.host {
+    margin-top: 0px!important;
+}
+
+
+/* ----------- Menus - Principal ------------- */
+.nav-principal .navbar {
+	min-height: 45px;
+	margin: 0;
+	border: none;
+	border-radius: 0;
+}
+
+.nav-principal .dropdown-menu {
+	border-radius: 0;
+}
+
+.nav-principal .navbar-collapse {
+	padding: 0;
+}
+
+.nav-principal  .nav>li>a {
+    padding: 5px 15px;
+}
+
+.nav-principal .separador {
+	min-height: 45px;
+	margin: 0;
+	padding: 0;
+}
+
+/*=================================================================================
+									Gerais
+================================================================================ */
+
+/* ------------- Row ------------------ */
+
+/* Row - col - center */
+.row-center {
+	margin: 0 auto;
+    width: 90%;
+}
+
+.texto-centro{
+	text-align: center;
+}
+
+.col-center {
+	float: none;
+	text-align: left;
+	margin-right: -4px;
+	display: inline-block;
+}
+
+/* Row - margin */
+.row-mg-0 {
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+}
+
+.row-mg-2 {
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.row-mg-center {
+	margin-top: 10%;
+
+}
+
+.label-default {
+	cursor: not-allowed;
+    width: 19.25%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 15px;
+	}
+
+.panel-body{
+	padding-bottom: 0px;
+}
+/*=================================================================================
+									Componentes
+================================================================================ */
+
+
+/* ------------- Message ------------- */
+.message {
+	top: 0px;
+	left: 20%;
+	right: 10%;
+	width: 60%;
+	z-index: 1050;
+	position: fixed;
+}
+
+.message-content {
+	width: 100%;
+	padding: 10px;
+	display: none;
+	margin-bottom: 15px;
+}
+
+
+/* ------------- Campos Obrigatórios ------------- */
+.control-validation {
+	margin-top: -15px;
+	display: block;
+}
+
+.required:before {
+	font-size: 14px;
+	content: '* ';
+	color: red;
+}
+
+.validation-invalid {
+	color: red;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+
+.row-botoes{
+	padding: 3px !important;
+}
+
+
+/* tabela scroll, com Cabeçalho Fixo*/
+
+.panel-filtro{
+	padding: 7px;
+	margin-bottom: 8px;
+	padding-left: 30px;
+}
+
+.data-filtro{
+	width:97px !important;
+	margin-right: 4px;
+}
+
+.panel-filtro>div>select{
+	width:125px;
+	margin-right: 5px;
+}
+
+.panel-footer-tabela{
+	
+	padding :0px;
+	padding-right: 10px;
+	border-right: 1px solid #ddd;
+	border-bottom : 1px solid #ddd;
+	border-top : 0px;
+	height: 34px;
+}
+
+.modal-login{
+	margin-top: 15%;
+}
+
+.datepicker {
+	z-index: 1151 !important;
+}
+
+/* Fildset With Boostrap  */
+
+fieldset.scheduler-border {
+    border: 1px solid #ccc !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    border-radius: 9px;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+}
+
+legend.scheduler-border {
+    border: solid 1px #DDD !important;
+    padding: 0 10px 10px 10px;
+    border-bottom: none;
+}
+
+legend.scheduler-border {
+   width: auto !important;
+    font-size: 14px;
+    background-color: #4A77CA;
+    color: white;
+    font-weight: bold;
+    border-radius: 9px;
+}
+	

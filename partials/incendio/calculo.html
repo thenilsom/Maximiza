@@ -1,0 +1,172 @@
+<style>
+.label-danger{
+font-size: 10pt;
+}
+
+/*reduz o padding entre as linhas*/
+.list-group-item{
+padding: 5px 15px !important;
+border: none !important;
+}
+
+.totais h3{
+font-weight: bold !important;
+}
+</style>
+
+<div class="panel panel-default">
+
+	<div class="panel-heading">
+		<h2 class="panel-title">Incêndio</h2>
+	</div>
+
+	<div class="panel-body fundo-panel">
+
+		<form role="form">
+
+			<div class="row-fluid">
+
+				<div class=row-center>
+
+					<!--PARAMETROS -->
+					<div class="col-md-2 col-sm-4  espaco-grid">
+
+						<label class="control-label" for="tipoSeguro">Tipo Seguro</label>
+						<select class="form-control input-sm" id="tipoSeguro"></select>
+
+					</div>
+
+					<div class="col-md-5 col-sm-8  espaco-grid">
+
+						<label class="control-label" for="ocupacao">Ocupação</label> <select
+							class="form-control input-sm" id="ocupacao"></select>
+
+					</div>
+
+					<div class="col-md-1 col-sm-2  espaco-grid">
+
+						<label class="control-label" for="tabela">Tabela</label> <select
+							class="form-control input-sm" id="tabela"></select>
+
+					</div>
+
+
+					<div class="col-md-2 col-sm-5  espaco-grid">
+
+						<label class="control-label" for="aluguel">Aluguel</label>
+						<div class="input-group">
+							<span class="input-group-addon btn-small" id="basic-addon1">R$</span>
+							<input type="text" class="form-control input-sm" id="aluguel"
+							data-mask-money>
+						</div>
+
+					</div>
+
+					<div class="col-md-2 col-sm-1  espaco-grid"
+						style="margin-top: 35px;">
+						<button class="btn btn-success">
+							<span class="glyphicon glyphicon-usd"></span> Sugerir Valores
+						</button>
+
+					</div>
+				</div>
+
+			</div>
+
+			<!-- IMPORTE DA TABELA -->
+			<div class="row-fluid">
+				<div class="col-md-12 col-sm-12">
+					<div data-ng-include="'partials/incendio/tabela.html'"></div>
+				</div>
+			</div>
+
+			<!-- RODAPÃ‰ DE CALCULOS -->
+			<div class="row-fluid  text-right">
+				<div class=row-center>
+					<div class="col-md-6 col-sm-6 col-xs-12 espaco-grid-bottom-2">
+						<label class="radio-inline"> <input type="radio"
+							class="big-checkbox" name="optradio"> <span
+							class="label label-danger">Assistencia 24Hs R$ 25,00</span>
+						</label>
+					</div>
+
+					<div class="col-md-6 col-sm-6 col-xs-12 espaco-grid-bottom-2">
+						<label class="radio-inline"> <input type="radio"
+							class="big-checkbox" name="optradio"><span
+							class="label label-danger">Assistencia 24Hs R$ 35,00</span>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<!-- Calculo Inverso -->
+			<div class="row-fluid">
+				<div class=row-center>
+					<div class="col-md-4 col-sm-3 col-xs-12">
+						<ul class="list-group">
+							<li class="list-group-item active">Calculo Inverso</li>
+							<li class="list-group-item">
+								<div class="input-group">
+									<span class="input-group-addon">R$</span>
+									 <input type="text" class="form-control input-sm" data-mask-money>
+								</div>
+							</li>
+							<li class="list-group-item"><button
+									class="btn btn-success btn-block">
+									<span class="glyphicon glyphicon-ok"> </span>
+								</button></li>
+						</ul>
+
+
+					</div>
+
+					<!-- Parcelamento -->
+					<div class="col-md-4 col-sm-5 col-xs-12">
+						<ul class="list-group">
+							<li class="list-group-item active"><label>Parcelamento</label>
+							<li class="list-group-item"><input type="checkbox"
+								class="big-checkbox"> <label>1x=Entrada de
+									R$35,00</label></li>
+							<li class="list-group-item"><input type="checkbox"
+								class="big-checkbox"> <label>2x=Entrada de
+									R$35,00</label></li>
+							<li class="list-group-item"><input type="checkbox"
+								class="big-checkbox"> <label>3x=Entrada de
+									R$35,00</label></li>
+							<li class="list-group-item"><input type="checkbox"
+								class="big-checkbox"> <label>4x=Entrada de
+									R$35,00</label></li>
+						</ul>
+					</div>
+
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<ul class="list-group">
+							<li class="list-group-item active"><label>Totais</label>
+							<li class="list-group-item"><label class="totais"><h3>R$
+										1284,00</h3></label></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Botoes -->
+			<div class="row-fluid">
+				<div class="form-group">
+					<div class="col-md-12 col-sm-12 col-xs-12 text-right">
+						<button type="button" class="btn btn-primary" data-ng-click="proximo()">
+							Proximo <span class="glyphicon glyphicon-arrow-right"></span>
+						</button>
+						<button type="button" class="btn btn-danger">
+							Sair <span class="glyphicon glyphicon-off"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+
+
+		</form>
+		
+		</div>
+	</div>
+		
