@@ -62,7 +62,7 @@ angular.module('app').controller('LoginController', ['$scope', '$http', '$confir
 		var usuario = {nome:'arroz', senha: 123, login: 'Leonardo'};
 		
         $http({
-            url: "/calculo/Maximiza/php/usuario.php/login",
+            url: "php/usuario.php/login",
             data : usuario,
             method: 'POST',
             headers : {'Content-Type':'application/json; charset=UTF-8'}

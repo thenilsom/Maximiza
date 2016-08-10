@@ -3,6 +3,9 @@
 require '../vendor/autoload.php';
 
 $app = new \Slim\Slim();
+$app->response()->header('Content-Type', 'application/json;charset=utf-8');
+
+$app->post('/login','testarLogin');
 
 $app->get('/teste', function() use ($app){
 	$resposta = array('message'=>'sucesso');
@@ -10,11 +13,13 @@ $app->get('/teste', function() use ($app){
 	echo($myJSON);
 });
 
-$app->post('/login', function () use ($app){
-  $request = $app->request();
-  $body = $request->getBody();
-  print $body;
-});
+	function testarLogin(){
+		 $request = \Slim\Slim::getInstance()->request();
+		 $produto = json_decode($request->getBody());
+		 
+		 echo json_encode($produto->nome);
+	}
+
 
 $app-> run();
 
